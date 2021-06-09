@@ -22,9 +22,12 @@
         android:textSize="24dp"
         android:text="음성인식 기능 사용하기"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"/>
+        android:id="@+id/result"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:text="[결과 출력칸]"/>
 <!--    <fragment-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"-->

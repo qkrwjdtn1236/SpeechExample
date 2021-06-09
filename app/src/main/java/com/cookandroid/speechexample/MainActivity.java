@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView text;
+    TextView text,resultText;
     Button btn;
     Intent intent;
     SpeechRecognizer mRecognizer;
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         text = findViewById(R.id.text);
         btn  = findViewById(R.id.btn);
+        resultText = findViewById(R.id.result);
+
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());
@@ -126,9 +128,11 @@ public class MainActivity extends AppCompatActivity {
 
             for(String i:matches)
             {
-                text.setText(i);
+//                text.setText(i);
                 result+=i;
             }
+            resultText.setText(result);
+
         }
 
         @Override
